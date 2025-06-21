@@ -1,0 +1,34 @@
+{
+  "name": "nagarro-replica",
+  "version": "1.0.0",
+  "description": "A pixel-perfect visual replica of the Nagarro website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "keywords": [
+    "nagarro",
+    "replica",
+    "frontend",
+    "react",
+    "nextjs"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.2.47",
+    "@types/react-dom": "^18.2.18",
+    "@types/react-slick": "^0.23.13",
+    "framer-motion": "^10.18.0",
+    "next": "^14.0.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-slick": "^0.29.0",
+    "sass": "^1.69.7",
+    "typescript": "^5.3.3"
+  }
+}

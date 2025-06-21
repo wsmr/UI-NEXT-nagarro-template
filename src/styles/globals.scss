@@ -1,0 +1,222 @@
+:root {
+  /* Primary Colors */
+  --color-black: rgb(0, 0, 0);
+  --color-white: rgb(255, 255, 255);
+  --color-dark-blue: rgb(19, 41, 75);
+  --color-purple: rgb(46, 0, 139);
+  
+  /* Secondary Colors */
+  --color-teal: rgb(71, 215, 172);
+  --color-pink: rgb(248, 72, 94);
+  --color-light-purple: rgb(98, 64, 168);
+  
+  /* Background Colors */
+  --color-light-gray: rgb(248, 248, 249);
+  --color-dark-blue-bg: rgb(6, 4, 31);
+  
+  /* Text Colors */
+  --color-dark-gray: rgb(51, 51, 51);
+  --color-medium-gray: rgb(78, 94, 120);
+  --color-light-gray-text: rgb(108, 118, 137);
+  
+  /* Transparency Effects */
+  --color-white-30: rgba(255, 255, 255, 0.3);
+  --color-white-70: rgba(255, 255, 255, 0.7);
+  --color-dark-overlay: rgba(1, 7, 22, 0.298);
+  
+  /* Font Families */
+  --font-equip: 'Equip', sans-serif;
+  --font-equip-extended: 'EquipExtended', sans-serif;
+  
+  /* Font Sizes */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-md: 18px;
+  --font-size-lg: 28px;
+  --font-size-xl: 32px;
+  --font-size-2xl: 40px;
+  --font-size-3xl: 50px;
+  
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-default: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  
+  /* Border Radius */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 16px;
+  --border-radius-full: 9999px;
+  
+  /* Z-index */
+  --z-index-dropdown: 100;
+  --z-index-sticky: 200;
+  --z-index-fixed: 300;
+  --z-index-modal: 400;
+  --z-index-popover: 500;
+  --z-index-tooltip: 600;
+}
+
+/* Font Face Declarations */
+@font-face {
+  font-family: 'Equip';
+  src: url('/fonts/Equip.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Equip';
+  src: url('/fonts/Equip-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Equip';
+  src: url('/fonts/Equip-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'EquipExtended';
+  src: url('/fonts/EquipExtended.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'EquipExtended';
+  src: url('/fonts/EquipExtended-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Base Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-equip);
+  font-size: var(--font-size-base);
+  color: var(--color-dark-gray);
+  background-color: var(--color-white);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-equip-extended);
+  font-weight: var(--font-weight-medium);
+  margin: 0 0 var(--spacing-md);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: var(--font-size-3xl);
+}
+
+h2 {
+  font-size: var(--font-size-2xl);
+}
+
+h3 {
+  font-size: var(--font-size-xl);
+}
+
+p {
+  margin: 0 0 var(--spacing-md);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-default);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+/* Utility Classes */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Responsive Breakpoints */
+@media (min-width: 768px) {
+  .container {
+    padding: 0 var(--spacing-xl);
+  }
+  
+  h1 {
+    font-size: var(--font-size-3xl);
+  }
+  
+  h2 {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 var(--spacing-2xl);
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    padding: 0 var(--spacing-3xl);
+  }
+}

@@ -1,0 +1,25 @@
+.about-section {
+  padding: var(--spacing-3xl) 0;
+  background-color: var(--color-light-gray);
+  
+  &__content {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  &__text {
+    font-family: var(--font-equip-extended);
+    font-size: var(--font-size-md);
+    line-height: 1.6;
+    color: var(--color-dark-blue);
+    
+    @media (min-width: 768px) {
+      font-size: var(--font-size-lg);
+    }
+    
+    @media (min-width: 1024px) {
+      font-size: var(--font-size-xl);
+    }
+  }
+}

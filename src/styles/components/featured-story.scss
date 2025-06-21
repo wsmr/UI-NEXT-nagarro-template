@@ -1,0 +1,110 @@
+.featured-story {
+  padding: var(--spacing-3xl) 0;
+  background-color: var(--color-white);
+  
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+    
+    @media (min-width: 1024px) {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+  }
+  
+  &__content {
+    padding: var(--spacing-md);
+    
+    @media (min-width: 768px) {
+      padding: var(--spacing-lg);
+    }
+  }
+  
+  &__title {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-md);
+    color: var(--color-dark-blue);
+    
+    @media (min-width: 768px) {
+      font-size: var(--font-size-2xl);
+    }
+  }
+  
+  &__subtitle {
+    font-family: var(--font-equip);
+    font-size: var(--font-size-sm);
+    color: var(--color-medium-gray);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  &__description {
+    font-family: var(--font-equip);
+    font-size: var(--font-size-md);
+    color: var(--color-dark-gray);
+    margin-bottom: var(--spacing-xl);
+    line-height: 1.6;
+  }
+  
+  &__button {
+    display: inline-block;
+    background-color: var(--color-purple);
+    color: var(--color-white);
+    font-family: var(--font-equip-extended);
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--border-radius-full);
+    transition: all var(--transition-default);
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  &__image {
+    position: relative;
+    
+    &-container {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 75%; /* 4:3 aspect ratio */
+      overflow: hidden;
+      border-radius: var(--border-radius-md);
+      background: linear-gradient(135deg, var(--color-pink) 0%, var(--color-light-purple) 100%);
+    }
+    
+    &-placeholder {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      
+      &.bunny-girl-1 {
+        background-color: var(--color-pink);
+        opacity: 0.8;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%, 0 70%);
+        
+        &::after {
+          content: "Bunny Girl Character";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: var(--color-white);
+          font-family: var(--font-equip);
+          font-size: var(--font-size-md);
+          text-align: center;
+        }
+      }
+      
+      &.bunny-girl-2 {
+        background-color: var(--color-light-purple);
+        opacity: 0.6;
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 70%, 30% 100%, 70% 100%, 100% 70%);
+      }
+    }
+  }
+}
