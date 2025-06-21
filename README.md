@@ -2,6 +2,11 @@
 
 This project is a pixel-perfect visual replica of the Nagarro website (https://www.nagarro.com), focusing solely on frontend appearance and layout without implementing backend functionality.
 
+## Demo
+Here's a quick look at the web application:
+
+![Demo](public/main.png)
+
 ## Technologies Used
 
 ### Core Technologies
